@@ -5,6 +5,12 @@ r = requests.get('https://www.michaelbryanstark.com/')
 print(r)
 #prints the response, output ==> <Response [200]>
 
+# Check the response status code
+if response.status_code == 200:
+    print('Request successful')
+else:
+    print('Request failed')
+    
 print(r.text)
 # prints out html of page
 print(r.content)
