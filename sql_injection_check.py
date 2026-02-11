@@ -11,6 +11,7 @@ def get_all_forms(url):
     """Given a `url`, it returns all forms from the HTML content"""
     soup = bs(s.get(url).content, "html.parser")
     return soup.find_all("form")
+# looking for forms in a site that accept inputs and run it through their programs
 
 def get_form_details(form):
     """
