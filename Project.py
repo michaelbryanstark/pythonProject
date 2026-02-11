@@ -1,8 +1,8 @@
 # Requests library
 import requests
-r = requests.get('https://www.michaelbryanstark.com/')
+response = requests.get('https://www.michaelbryanstark.com/')
 # Request to get a responce from url
-print(r)
+print(response)
 #prints the response, output ==> <Response [200]>
 
 # Check the response status code
@@ -11,19 +11,19 @@ if response.status_code == 200:
 else:
     print('Request failed')
     
-print(r.text)
+print(response.text)
 # prints out html of page
-print(r.content)
+print(response.content)
 # Prints out a response body as bytes for non-text requests i.e. images
 
 # Passing parameters in to URLS
 payload = {'key1': 'value1', 'key2': 'value2'}
-r = requests.get('https://www.michaelbryanstark.com/', params=payload)
-print(r.url)
+response = requests.get('https://www.michaelbryanstark.com/', params=payload)
+print(response.url)
 # output ==> https://www.michaelbryanstark.com/?key1=value1&key2=value2
 
-r = requests.get('https://api.github.com/events')
-print(r.json())
+response = requests.get('https://api.github.com/events')
+print(response.json())
 # Prints out json data
 
 # Cryptography Library
