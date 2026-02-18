@@ -104,4 +104,5 @@ def scan_sql_injection(url):
 
 if __name__ == "__main__":
     url = "http://testphp.vulnweb.com/artists.php?artist=1"
+    # test url to check if the program is running correctly
     scan_sql_injection(url)
