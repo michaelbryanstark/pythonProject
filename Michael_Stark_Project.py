@@ -21,6 +21,7 @@ payload = {'key1': 'value1', 'key2': 'value2'}
 response = requests.get('https://www.michaelbryanstark.com/', params=payload)
 print(response.url)
 # output ==> https://www.michaelbryanstark.com/?key1=value1&key2=value2
+# Useful in detecting web paramater tampering
 
 response = requests.get('https://api.github.com/events')
 print(response.json())
