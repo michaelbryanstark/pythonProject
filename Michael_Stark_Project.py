@@ -3,29 +3,33 @@ from pprint import pprint
 import requests
 response = requests.get('https://www.michaelbryanstark.com/')
 # Request to get a responce from url
-print(response)
+print(response, end="\n\n")
 #prints the response, output ==> <Response [200]>
 
 # Check the response status code
 if response.status_code == 200:
-    print('Request successful')
+    print('Request successful', end="\n\n")
 else:
-    print('Request failed')
+    print('Request failed', end="\n\n")
     
 pprint(response.text)
+print()
 # prints out html of page
 pprint(response.content)
+print()
 # Prints out a response body as bytes for non-text requests i.e. images
 
 # Passing parameters in to URLS
 payload = {'key1': 'value1', 'key2': 'value2'}
 response = requests.get('https://www.michaelbryanstark.com/', params=payload)
 print(response.url)
+print()
 # output ==> https://www.michaelbryanstark.com/?key1=value1&key2=value2
 # Useful in detecting web paramater tampering
 
 response = requests.get('https://api.github.com/events')
 pprint(response.json())
+print()
 # Prints out json data
 
 # Cryptography Library
